@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class RemovePlanetUseCase {
 
-
     @Autowired
     private PlanetaRepository planetaRepository;
     private SearchPlanetByIdUseCase searchPlanetByIdUseCase;

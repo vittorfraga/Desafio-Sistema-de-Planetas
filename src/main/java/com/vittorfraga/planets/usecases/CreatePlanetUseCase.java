@@ -36,18 +36,17 @@ public class CreatePlanetUseCase {
         String nomeDoPlaneta = planetRequest.nome();
         String url = "https://swapi.dev/api/planets/?search=" + nomeDoPlaneta;
 
-
         RestTemplate restTemplate = new RestTemplate();
         SwapiPlanetResponse swapiPlanetResponse = restTemplate.getForObject(url, SwapiPlanetResponse.class);
 
-        if (swapiPlanetResponse != null && swapiPlanetResponse.results() != null && !swapiPlanetResponse.results().isEmpty()) {
-            SwapiPlanetResult firstResult = swapiPlanetResponse.results().get(0);
-            List<String> films = firstResult.films();
-            return films != null ? films.size() : 0;
-        } else {
+        if (swapiPlanetResponse == null || swapiPlanetResponse.results() == null || swapiPlanetResponse.results().isEmpty()) {
             return 0;
         }
 
+        SwapiPlanetResult firstResult = swapiPlanetResponse.results().get(0);
+        List<String> films = firstResult.films();
+
+        return films.size();
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
@@ -57,4 +56,5 @@ public class CreatePlanetUseCase {
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record SwapiPlanetResponse(List<SwapiPlanetResult> results) {
     }
+
 }

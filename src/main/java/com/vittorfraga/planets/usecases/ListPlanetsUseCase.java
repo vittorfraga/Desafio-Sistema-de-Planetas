@@ -17,7 +17,6 @@ public class ListPlanetsUseCase {
     @Autowired
     private PlanetaRepository planetaRepository;
 
-
     public Page<PlanetResponse> execute(Pageable pageable) {
         Page<Planeta> planetas = planetaRepository.findAll(pageable);
         return planetas.map(DtoMapper::toResponse);

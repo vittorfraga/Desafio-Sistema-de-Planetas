@@ -21,7 +21,6 @@ public class SearchPlanetByIdController {
     @Autowired
     private SearchPlanetByIdUseCase searchPlanetByIdUseCase;
 
-
     @Operation(
             description = "Buscar um planeta pelo ID",
             summary = "Buscar um planeta pelo ID",
