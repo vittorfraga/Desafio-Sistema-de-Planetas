@@ -11,6 +11,7 @@ public class RemovePlanetUseCase {
 
     @Autowired
     private PlanetaRepository planetaRepository;
+    @Autowired
     private SearchPlanetByIdUseCase searchPlanetByIdUseCase;
 
     public void execute(Long id) {

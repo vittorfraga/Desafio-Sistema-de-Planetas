@@ -17,7 +17,7 @@ public class SearchPlanetByNameUseCase {
     private PlanetaRepository planetaRepository;
 
     public PlanetResponse execute(String nome) {
-        Planeta planeta = planetaRepository.findByNome(nome).orElseThrow(() -> new ResourceNotFoundException("Planeta não encontrado com o nome: " + nome));
+        Planeta planeta = planetaRepository.findByNomeIgnoreCase(nome).orElseThrow(() -> new ResourceNotFoundException("Planeta não encontrado com o nome: " + nome));
         return DtoMapper.toResponse(planeta);
     }
 }
