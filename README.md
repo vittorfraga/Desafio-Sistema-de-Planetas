@@ -26,6 +26,7 @@ para obter informações adicionais sobre os planetas, como a quantidade de apar
 - **controllers/handlers**: Contém manipuladores de exceção para tratamento de erros.
 - **dtos**: Contém os DTOs (Data Transfer Objects) utilizados para comunicação com a API.
 - **config**: Contém a configuração do projeto, como o arquivo de configuração do Swagger.
+- **services**: Contém arquivos de serviços externos.
 
 ### Configuração
 
