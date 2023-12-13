@@ -32,4 +32,6 @@ para obter informações adicionais sobre os planetas, como a quantidade de apar
 1. Clone o repositório.
 2. Utilize `docker-compose up` para iniciar os containers do PostgreSQL.
 
+### Endpoints
 
+- Ao rodar a aplicação disponível em:   `http://localhost:8080/swagger-ui/index.html#/`

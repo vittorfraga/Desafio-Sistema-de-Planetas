@@ -18,6 +18,6 @@ public class OpenApiConfig {
                         .title("Challenge Back-End")
                         .description("Challenge Back-End Project")
                         .version("v0.0.1")
-                        .license(new License().name("Challenge Back-End").url("URL Temporária")));
+                        .license(new License().name("Challenge Back-End").url("https://github.com/vittorfraga/Desafio-Sistema-de-Planetas/tree/main")));
     }
 }
