@@ -30,7 +30,7 @@ public class SearchPlanetByIdController {
             }
     )
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<PlanetResponse> searchPlanetById(@PathVariable Long id) {
+    public ResponseEntity<PlanetResponse> handle(@PathVariable Long id) {
         PlanetResponse planet = searchPlanetByIdUseCase.execute(id);
         return ResponseEntity.ok(planet);
     }

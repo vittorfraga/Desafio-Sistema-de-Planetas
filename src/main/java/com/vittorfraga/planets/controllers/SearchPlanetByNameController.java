@@ -30,7 +30,7 @@ public class SearchPlanetByNameController {
             }
     )
     @GetMapping(value = "/buscarPorNome/{nome}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<PlanetResponse> searchPlanetByName(@PathVariable String nome) {
+    public ResponseEntity<PlanetResponse> handle(@PathVariable String nome) {
         PlanetResponse planet = searchPlanetByNameUseCase.execute(nome);
         return ResponseEntity.ok(planet);
     }

@@ -28,7 +28,7 @@ public class DeletePlanetController {
             }
     )
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> removePlanet(@PathVariable Long id) {
+    public ResponseEntity<Void> handle(@PathVariable Long id) {
         removePlanetUseCase.execute(id);
         return ResponseEntity.noContent().build();
     }

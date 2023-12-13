@@ -29,7 +29,7 @@ public class ListPlanetsController {
             }
     )
     @GetMapping
-    public ResponseEntity<Page<PlanetResponse>> listAllPlanets(Pageable pageable) {
+    public ResponseEntity<Page<PlanetResponse>> handle(Pageable pageable) {
         Page<PlanetResponse> planets = listPlanetsUseCase.execute(pageable);
         return ResponseEntity.ok(planets);
     }
